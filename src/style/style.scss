@@ -26,7 +26,7 @@
   background-position: center;
   text-align: center;
   font-size: xx-large;
-  color: black;
+  color: rgb(255, 255, 255);
   scroll-behavior: smooth;
 
 }
@@ -40,6 +40,7 @@
   padding: 20px;
   text-align: center;
   height: 100vh;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,6 +100,7 @@
 
 .nextQestion {
   display: none;
+  margin-top: 10px;
 }
 
 .restartGameBtn {
