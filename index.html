@@ -2,16 +2,50 @@
 <html lang="en"> <!-- TODO: glöm ej att byta språk här -->
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/js-template/favicon.ico" />
+    <link rel="icon" type="image/ico" href="/fed22d-js-grundkurs-2-quiz-MostaphaEchelhi/favicon.ico" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quiz, world Cup, football, Qatar," />
     <title>Projekt</title>
-    <script type="module" crossorigin src="/js-template/assets/index.288365a0.js"></script>
-    <link rel="stylesheet" href="/js-template/assets/index.09951560.css">
+    <script type="module" crossorigin src="/fed22d-js-grundkurs-2-quiz-MostaphaEchelhi/assets/index.fd49623d.js"></script>
+    <link rel="stylesheet" href="/fed22d-js-grundkurs-2-quiz-MostaphaEchelhi/assets/index.125145cd.css">
   </head>
   <body>
-    <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
-      <!-- TODO: skriv din kod här, innan script-taggen -->
+    <div class="background-image" id="background-image">
+      <h1>Football Quiz</h1>
+      <button> <a class="toTheSecandPage" id="toTheSecandPage" href="#secnadPage">Accept</a></button>
+    </div>
+    <main class="secnadPage" id="secnadPage">
+      <div class="app" id="app">
+        <h1>Football Quiz</h1>
+        <p>Take this quiz and test your football knowledge. Are you ready for the World Cup in Qatar 2022</p>
+      </div>
+      <div id="gameDescription"></div>
+
+      <div id="playerDetails">
+        <label>
+          Ditt namn
+          <br>
+          <input type="text" class="playerNameInpu" id="playerNameInput" value="">
+        </label> 
+        <br>
+        <button id="startGameBtn">Starta spelet</button>
+      </div>
+
+      <div class="questionContainer" id="questionContainer">
+        <div id="questionText"></div>
+        <button id="answer1"></button>
+        <button id="answer2"></button>
+        <button id="answer3"></button>
+      </div>
+
+      <div id="gameOver" class="gameOver">
+        <p id="pointsContainer"></p>
+        <div class="restartGameBtn" id="restartGameBtn">
+          <button>Spela igen</button>
+        </div>
+      </div>
+
     </main>
 
     <!-- TODO
