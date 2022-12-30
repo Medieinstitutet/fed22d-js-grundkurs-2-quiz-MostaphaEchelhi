@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en"> <!-- TODO: glöm ej att byta språk här -->
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" href="/src/style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz, world Cup, football, Qatar,">
     <title>Projekt</title>
   </head>
   <body>
-    <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
-      <!-- TODO: skriv din kod här, innan script-taggen -->
+    <div class="background-image" id="background-image">
+      <h1>Football Quiz</h1>
+      <button id="toTheSecandPage" class="toTheSecandPage">Accept</button>
+    </div>
+    <main class="secnadPage" id="secnadPage">
+      <div class="app" id="app">
+        <h1>Football Quiz</h1>
+        <p>Take this quiz and test your football knowledge. Are you ready for the World Cup in Qatar 2022</p>
+      </div>
+      <div id="gameDescription"></div>
+
+      <div id="playerDetails">
+        <label>
+          Ditt namn
+          <br>
+          <input type="text" class="playerNameInpu" id="playerNameInput" value="">
+        </label> 
+        <br>
+        <button id="startGameBtn">Starta spelet</button>
+      </div>
+
+      <div class="questionContainer" id="questionContainer">
+        <div id="questionText"></div>
+        <button id="answer1"></button>
+        <button id="answer2"></button>
+        <button id="answer3"></button>
+      </div>
+
+      <div id="gameOver" class="gameOver">
+        <p id="pointsContainer"></p>
+        <div class="restartGameBtn" id="restartGameBtn">
+          <button>Spela igen</button>
+        </div>
+      </div>
+
     </main>
 
     <!-- TODO
@@ -17,6 +51,6 @@
     - Kontrollera tillgänglighet: https://www.a11yproject.com/checklist/ & Chrome Lighthouse/Firefox Accessibility Tools
     - Validera genererade CSS: https://jigsaw.w3.org/css-validator/#validate_by_input
     -->
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

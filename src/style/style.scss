@@ -2,7 +2,6 @@
 @use "vendor/reset";
 
 :root {
-  // TODO: Går bra att radera kod även här!
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: rem(16px);
   line-height: 24px;
@@ -17,16 +16,42 @@
   text-size-adjust: 100%;
 }
 
-// TODO: Radera mig! Jag är bara ett exempel.
-main {
-  padding: 20px;
+
+.background-image {
+  background-image: url(/VM.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
 }
+
+
+
+.toTheSecandPage{
+  text-decoration: none;
+  color: black;
+}
+
+.secnadPage {
+  display: none;
+  font-variant: all-small-caps;
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  border: 3px dashed rgb(255, 255, 255);
+}
+
+
 
 .app {
   margin-block: 20px;
-  display: flex;
-  gap: 20px;
-  justify-content: space-around;
+  
+  
+
 
   .card {
     $card-size: 250px;
@@ -61,4 +86,23 @@ main {
       }
     }
   }
+}
+
+
+
+.playerNameInpu {
+  text-align: center;
+}
+
+.questionContainer {
+  display: none;
+}
+
+.nextQestion {
+  display: none;
+  margin-top: 10px;
+}
+
+.restartGameBtn {
+  display: none;
 }
