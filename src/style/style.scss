@@ -27,9 +27,9 @@
   text-align: center;
   font-size: xx-large;
   color: rgb(255, 255, 255);
-  scroll-behavior: smooth;
-
 }
+
+
 
 .toTheSecandPage{
   text-decoration: none;
@@ -37,13 +37,11 @@
 }
 
 .secnadPage {
+  display: none;
+  font-variant: all-small-caps;
   padding: 20px;
   text-align: center;
   height: 100vh;
-  gap: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border: 3px dashed rgb(255, 255, 255);
 }
 
@@ -89,6 +87,8 @@
     }
   }
 }
+
+
 
 .playerNameInpu {
   text-align: center;

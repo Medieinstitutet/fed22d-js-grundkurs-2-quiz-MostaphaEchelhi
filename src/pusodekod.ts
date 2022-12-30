@@ -9,3 +9,4 @@
  */
 
 //problem med antal poäng vid klick av sammar svar []
+//Problem med next knapp, då man kan klicka på next utan att välja en av alternativen. []

@@ -1,10 +1,16 @@
+/********************************************************Import*********************************************************************************************************************/
 import './style/style.scss';
 import { shuffle } from './utils';
-
+/********************************************************Variables*******************************************************************************************************************/
 
 const gameDescription = document.querySelector('#gameDescription');
-
-document.querySelector('#startGameBtn').addEventListener('click', startGame);
+const accpteBtn = document.querySelector('#toTheSecandPage');
+const questionTextDiv = document.querySelector('#questionText');
+const answer1Btn = document.querySelector('#answer1');
+const answer2Btn = document.querySelector('#answer2');
+const answer3Btn = document.querySelector('#answer3');
+let currentQuestion = 0;
+let points = 0;
 
 let playerName = '';
 
@@ -101,6 +107,27 @@ const questions = [
   },
 ];
 
+/**************************************************************************Function*************************************************************************************************/
+accpteBtn.addEventListener('click', goToGame );
+
+document.querySelector('#startGameBtn').addEventListener('click', startGame);
+
+answer1Btn.addEventListener('click', checkAnswer);
+answer2Btn.addEventListener('click', checkAnswer);
+answer3Btn.addEventListener('click', checkAnswer);
+
+answer1Btn.addEventListener('click', nextQuestion);
+answer2Btn.addEventListener('click', nextQuestion);
+answer3Btn.addEventListener('click', nextQuestion);
+
+document.querySelector('#restartGameBtn').addEventListener('click', restartGame);
+
+function goToGame() {
+  document.querySelector('#background-image').style.display = 'none';
+  document.querySelector('#secnadPage').style.display = 'block';
+}
+
+
 
 function startGame() {
   // Spara spelarens nick
@@ -110,21 +137,9 @@ function startGame() {
   gameDescription.style.display = 'none';
   document.querySelector('#playerDetails').style.display = 'none';
   document.querySelector('#questionContainer').style.display = 'block';
-  document.querySelector('#nextQestion').style.display = 'block';
   nextQuestion ();
 }
 
-const questionTextDiv = document.querySelector('#questionText');
-const answer1Btn = document.querySelector('#answer1');
-const answer2Btn = document.querySelector('#answer2');
-const answer3Btn = document.querySelector('#answer3');
-
-answer1Btn.addEventListener('click', checkAnswer);
-answer2Btn.addEventListener('click', checkAnswer);
-answer3Btn.addEventListener('click', checkAnswer);
-
-let currentQuestion = 0;
-let points = 0;
 
 function checkAnswer(e) {
   const userAnswer = e.currentTarget.innerHTML; // vilket svarsalternativ
@@ -139,9 +154,6 @@ function checkAnswer(e) {
     points --;
   }
 }
-
-const next = document.querySelector('#nextQestion');
-next.addEventListener('click', nextQuestion);
 
 
 function nextQuestion() {
@@ -158,7 +170,7 @@ function nextQuestion() {
   currentQuestion++; // += 1, currentQuestion = currentQuestion + 1;
 }
 
-document.querySelector('#restartGameBtn').addEventListener('click', restartGame);
+
 
 function restartGame() {
   document.querySelector('#gameOver').style.display = 'none';
@@ -174,7 +186,6 @@ function gameOver() {
   document.querySelector('#gameOver').style.display = 'block';
   document.querySelector('#questionContainer').style.display = 'none';
   document.querySelector('#pointsContainer').innerHTML = `Du fick ${points} poäng!`;
-  document.querySelector('#nextQestion').style.display = 'none';
   document.querySelector('#restartGameBtn ').style.display = 'block';
 
   // document.querySelector('#gameOver').classList.toggle('hidden');
